@@ -1,5 +1,5 @@
-const Post = require("../models/postModel")
-const Comment = require("../models/commentModel")
+const Post = require("../model/view/postModel")
+const Comment = require("../model/view/commentModel");
 
 //define route Handler
 exports.createCommentController = async (req, res) => {
