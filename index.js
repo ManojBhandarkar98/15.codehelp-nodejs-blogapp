@@ -5,6 +5,15 @@ const app = express();
 require("dotenv").config();
 const PORT = process.env.PORT || 3000;
 
+//middleware - to parse request json body
+app.use(express.json());
+
+//import routes for TODO API
+const blog = require("./routes/blog");
+
+//mounting the todo api route
+app.use("/api/v1", blog);
+
 //Connect to DB  
 const connectWithDB = require("./config/database");
 connectWithDB();
